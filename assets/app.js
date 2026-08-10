@@ -3,7 +3,9 @@
    The contact form uses NO third-party service. The two send controls are real
    links whose href is rebuilt every time a field changes, so clicking one is an
    ordinary user navigation — never blocked by a popup blocker, and nothing is
-   ever sent from this site. */
+   ever sent from this site. A third control copies the composed message to the
+   clipboard, which works even where wa.me / mailto do not (a desktop with no
+   mail client configured, or no WhatsApp session in the browser). */
 (function () {
   "use strict";
   var d = document, root = d.documentElement;
@@ -41,8 +43,8 @@
   var form = d.getElementById("contact-form");
   if (!form) return;
 
-  var links = form.querySelectorAll("[data-send]");
-  if (!links.length) return;
+  var sendLinks = form.querySelectorAll('[data-send="whatsapp"], [data-send="email"]');
+  var copyBtn   = form.querySelector('[data-send="copy"]');
 
   function val(name) {
     var el = form.elements[name];
@@ -72,7 +74,7 @@
   /* Rebuild both hrefs from the current field values */
   function refresh() {
     var body = compose();
-    Array.prototype.forEach.call(links, function (a) {
+    Array.prototype.forEach.call(sendLinks, function (a) {
       a.href = (a.getAttribute("data-send") === "whatsapp")
         ? "https://wa.me/" + PHONE + "?text=" + encodeURIComponent(body)
         : "mailto:" + EMAIL + "?subject=" + encodeURIComponent(subject()) + "&body=" + encodeURIComponent(body);
@@ -84,8 +86,8 @@
   form.addEventListener("change", refresh);
   form.addEventListener("submit", function (e) { e.preventDefault(); });
 
-  /* Block the navigation only when required fields are still empty */
-  Array.prototype.forEach.call(links, function (a) {
+  /* Block the navigation only while required fields are still empty */
+  Array.prototype.forEach.call(sendLinks, function (a) {
     a.addEventListener("click", function (e) {
       refresh();
       if (typeof form.checkValidity === "function" && !form.checkValidity()) {
@@ -94,4 +96,33 @@
       }
     });
   });
+
+  /* Clipboard fallback — always works, even with no mail client or WhatsApp session */
+  if (copyBtn) {
+    copyBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      var text = compose();
+      var done = function () {
+        var was = copyBtn.textContent;
+        copyBtn.textContent = he ? "ההודעה הועתקה ✓" : "Message copied ✓";
+        setTimeout(function () { copyBtn.textContent = was; }, 2600);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, function () { legacyCopy(text, done); });
+      } else {
+        legacyCopy(text, done);
+      }
+    });
+  }
+
+  function legacyCopy(text, done) {
+    var ta = d.createElement("textarea");
+    ta.value = text;
+    ta.setAttribute("readonly", "");
+    ta.style.cssText = "position:fixed;inset-block-start:-1000px;opacity:0";
+    d.body.appendChild(ta);
+    ta.select();
+    try { d.execCommand("copy"); done(); } catch (err) { /* nothing more we can do */ }
+    d.body.removeChild(ta);
+  }
 })();
