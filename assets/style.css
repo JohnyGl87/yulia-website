@@ -231,12 +231,6 @@ section { padding-block: clamp(66px, 9vw, 128px); position: relative; scroll-mar
   border-radius: 50%; border: 1.5px solid var(--clay-line);
   z-index: -1; pointer-events: none;
 }
-.portrait::after {
-  content: ""; position: absolute; inset-block-end: 4px; inset-inline-start: 4px;
-  width: 34%; aspect-ratio: 1; border-radius: 50%;
-  background: radial-gradient(circle at 35% 35%, var(--clay-soft), var(--sand));
-  z-index: -1; pointer-events: none;
-}
 
 /* photo placeholder — shows only if the photo file is missing */
 .photo-ph {
