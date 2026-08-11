@@ -214,8 +214,7 @@ section { padding-block: clamp(66px, 9vw, 128px); position: relative; scroll-mar
 }
 .hero .lead { margin-top: 24px; font-size: 1.14rem; max-width: 33em; }
 .hero .cta-row { margin-top: 34px; display: flex; flex-wrap: wrap; gap: 14px; }
-.hero-badge { margin-top: 30px; display: flex; align-items: center; gap: 11px; color: var(--muted); font-size: .92rem; line-height: 1.5; }
-.hero-badge b { color: var(--ink); font-weight: 700; }
+.hero-badge { margin-top: 30px; display: flex; align-items: center; gap: 11px; color: var(--body); font-weight: 500; font-size: .95rem; line-height: 1.5; }
 .hero-badge .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--sage); flex: none; }
 
 /* signature circular portrait with a fine offset ring */
