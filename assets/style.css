@@ -421,7 +421,7 @@ html[lang="he"] .quote blockquote { font-style: normal; }  /* Frank Ruhl Libre h
 .footer-brand { display: flex; align-items: center; gap: 13px; color: #fff; }
 .footer-brand img {
   width: 52px; height: 52px;
-  background: #fff; border-radius: 50%; padding: 3px;   /* the mark is black — needs a light chip on the dark footer */
+  filter: invert(1);   /* the mark is pure black — inverted it becomes white on the dark footer */
 }
 .footer-brand .brand-name { font-family: var(--f-head); font-weight: 600; font-size: 1.2rem; }
 .footer-brand .brand-sub { color: rgba(255,255,255,.48); }

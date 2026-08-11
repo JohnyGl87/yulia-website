@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="241" height="241" viewBox="0 0 241 241">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="241" height="241" viewBox="0 0 241 241">
+<circle cx="120.5" cy="120.5" r="120.5" fill="#F6EFE6"/>
+<g transform="translate(24.1,24.1) scale(0.8)">
 <defs>
 <clipPath id="clip_1">
 <path transform="matrix(1,0,0,-1,-67,311.03999)" d="M67 70.03998H308V311.03999H67Z" clip-rule="evenodd"/>
@@ -100,6 +102,7 @@
 </g>
 <path transform="matrix(1,0,0,-1,-67,311.03999)" d="M70.095539 73.17788H304.90449V307.98683H70.095539Z" fill-opacity="0"/>
 <path transform="matrix(1,0,0,-1,-67,311.03999)" d="M33.78338 61.643445H163.6994V223.98323H33.78338Z" fill-opacity="0"/>
+</g>
 </g>
 </g>
 </svg>

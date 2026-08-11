@@ -17,7 +17,8 @@
 | `lecture-en.html` | עמוד ההרצאה "From Hesitation to Action" — אנגלית |
 | `assets/style.css` | כל העיצוב. משותף לארבעת העמודים |
 | `assets/app.js` | אנימציות, תפריט נייד, והטופס |
-| `assets/mark.svg` | הסמל (חץ עולה) — משמש גם כאייקון הלשונית |
+| `assets/logo.svg` | הלוגו של יוליה (מונוגרמת YG) — כותרת ותחתית |
+| `assets/favicon.svg` | הלוגו על תג קרם עגול — אייקון הלשונית |
 | `assets/yulia.jpg` | **התמונה של יוליה — צריך להוסיף ידנית** |
 | `assets/flag-en.jpg`, `assets/flag-he.png` | דגלים למתג השפה |
 
