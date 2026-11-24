@@ -12,6 +12,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&family=Frank+Ruhl+Libre:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/style.css?v=2">
+<style>
+  /* this page only: keep the footer at the bottom of short screens, and show the English link as a link */
+  body { min-height: 100vh; display: flex; flex-direction: column; }
+  main { flex: 1; }
+  .nf-en a { text-decoration: underline; text-underline-offset: 3px; }
+</style>
 </head>
 <body>
 <!-- Served by Cloudflare Pages (status 404) for any address that has no page.
@@ -45,7 +51,7 @@
       <a class="btn btn-primary" href="/">לעמוד הבית</a>
       <a class="btn btn-ghost" href="/lecture">ההרצאה «ממהסס לפועל»</a>
     </div>
-    <p class="lead" lang="en" dir="ltr">Page not found. <a href="/en">Go to the English site</a></p>
+    <p class="lead nf-en" lang="en" dir="ltr">Page not found. <a href="/en">Go to the English site</a></p>
   </div>
 </section>
 </main>
