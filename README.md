@@ -20,6 +20,7 @@
 | `assets/yulia.jpg` | התמונה של יוליה (624×630), בעמוד הבית ובעמוד ההרצאה |
 | `assets/flag-en.jpg`, `assets/flag-he.png` | דגלים למתג השפה |
 | `assets/apple-touch-icon.png`, `favicon.ico` | אותו לוגו, לאייפון ולדפדפנים ישנים |
+| `404.html` | עמוד "הדף לא נמצא" (עברית + שורה באנגלית). Cloudflare מגיש אותו עם קוד 404 לכל כתובת שאין לה עמוד |
 | `robots.txt`, `sitemap.xml` | לגוגל: מה מותר לסרוק, ורשימת ארבעת העמודים עם הזוגות עברית/אנגלית |
 | `_headers` | הגדרות שרת של Cloudflare: זמן שמירה בזיכרון, ו-noindex לעותק ב-pages.dev |
 
