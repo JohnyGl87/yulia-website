@@ -1,0 +1,19 @@
+# Cloudflare Pages custom headers.
+# Docs: https://developers.cloudflare.com/pages/configuration/headers/
+#
+# NOTE: Cloudflare merges EVERY rule that matches a URL and joins repeated header
+# names with a comma. A rule that overrides a header set by /assets/* must first
+# detach it ("! Cache-Control") so each file ends up with exactly one value.
+
+# CSS, JS and images: cache for a day. style.css and app.js are linked with ?v=N;
+# bump N in all four pages (and 404.html) whenever either file changes.
+/assets/*
+  Cache-Control: public, max-age=86400
+
+# Keep the *.pages.dev copy of the site out of search engines (the real address is yulia.gnrg360.com).
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+
+# Repo documentation is not site content.
+/README.md
+  X-Robots-Tag: noindex

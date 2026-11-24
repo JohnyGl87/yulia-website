@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://yulia.gnrg360.com/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://yulia.gnrg360.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yulia.gnrg360.com/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yulia.gnrg360.com/en"/>
+  </url>
+  <url>
+    <loc>https://yulia.gnrg360.com/en</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://yulia.gnrg360.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yulia.gnrg360.com/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yulia.gnrg360.com/en"/>
+  </url>
+  <url>
+    <loc>https://yulia.gnrg360.com/lecture</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://yulia.gnrg360.com/lecture"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yulia.gnrg360.com/lecture-en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yulia.gnrg360.com/lecture-en"/>
+  </url>
+  <url>
+    <loc>https://yulia.gnrg360.com/lecture-en</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://yulia.gnrg360.com/lecture"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yulia.gnrg360.com/lecture-en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yulia.gnrg360.com/lecture-en"/>
+  </url>
+</urlset>
